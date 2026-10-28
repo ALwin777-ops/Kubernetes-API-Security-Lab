@@ -1,0 +1,29 @@
+apiVersion: audit.k8s.io/v1
+kind: Policy
+rules:
+  - level: Metadata
+    resources:
+      - group: ""
+        resources:
+          - secrets
+          - serviceaccounts
+      - group: rbac.authorization.k8s.io
+        resources:
+          - roles
+          - rolebindings
+          - clusterroles
+          - clusterrolebindings
+
+  - level: Metadata
+    resources:
+      - group: ""
+        resources:
+          - pods
+          - namespaces
+          - configmaps
+      - group: apps
+        resources:
+          - deployments
+          - replicasets
+
+  - level: Metadata

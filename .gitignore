@@ -1,0 +1,7 @@
+﻿# Kubernetes audit logs may contain sensitive metadata
+audit-logs/
+*.log
+
+# Local and temporary files
+*.tmp
+*.bak
